@@ -1,10 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const TableCard = () => {
+const TableCard = ({ table }) => {
   return (
-    <div>
-      <h1>TableCard</h1>
-    </div>
+    <li>
+      <NavLink to={`/tables/${table.id}`}>{ table.table_number }</NavLink>
+    </li>
   )
 }
 
