@@ -4,8 +4,10 @@ import NavBar from './components/NavBar'
 import Home from './components/Home'
 import GuestList from './components/GuestList'
 import TableList from './components/TableList'
+import NewTable from './components/NewTable'
 
 function App() {
+
   return (
     <Router>
       <div className="App">
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/guests" element={<GuestList />} />
           <Route path="/tables" element={<TableList />} />
+          <Route path="/tables/new" element={<NewTable />} />
+
         </Routes>
       </div>
     </Router>
@@ -21,3 +25,4 @@ function App() {
 }
 
 export default App;
+
