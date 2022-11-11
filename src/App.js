@@ -17,7 +17,6 @@ function App() {
           <Route path="/guests" element={<GuestList />} />
           <Route path="/tables" element={<TableList />} />
           <Route path="/tables/new" element={<NewTable />} />
-
         </Routes>
       </div>
     </Router>
