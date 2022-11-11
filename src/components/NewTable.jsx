@@ -22,7 +22,7 @@ const NewTable = () => {
       body: JSON.stringify(body)
     }
     const response = await fetch(baseUrl + '/tables', options)
-    const data = await response.json()
+    // const data = await response.json()
     navigate('/tables')
   }
   return (
