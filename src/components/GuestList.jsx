@@ -11,7 +11,7 @@ const GuestList = () => {
       .then(data => setGuests(data))
   }, [])
 
-  const guestCards = guests.map((guest, index) => <GuestCard key={ index } guest={ guest }/>)  
+  const guestCards = guests.map((guest, index) => <GuestCard key={ index } guest={ guest } table={ guest.table }/>)  
   return (
     <div> 
       <h1>Guest List</h1>

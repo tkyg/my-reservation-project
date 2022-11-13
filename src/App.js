@@ -5,6 +5,7 @@ import Home from './components/Home'
 import GuestList from './components/GuestList'
 import TableList from './components/TableList'
 import NewTable from './components/NewTable'
+import TableDetails from './components/TableDetails'
 
 function App() {
 
@@ -14,9 +15,11 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/guests" element={<GuestList />} />
           <Route path="/tables" element={<TableList />} />
           <Route path="/tables/new" element={<NewTable />} />
+          <Route path="/tables/:id" element={<TableDetails />} />
+          <Route path="/guests" element={<GuestList />} />
+
         </Routes>
       </div>
     </Router>
