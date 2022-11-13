@@ -23,8 +23,8 @@ const TableDetails = () => {
     return (
       <div>
         <h1>{ table.table_number }</h1>
+        <p>Create Guest</p>
         { guestCards }
-
       </div>
     )
   }

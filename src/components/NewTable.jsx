@@ -27,7 +27,7 @@ const NewTable = () => {
   }
   return (
     <div style={{"fontFamily": "Mukta"}}>
-      <h1>NewTable</h1>
+      <h1>New Table</h1>
       <Form onSubmit={ handleSubmit }>
         <div>
           <label htmlFor="tableNumber">Table Number: </label>
