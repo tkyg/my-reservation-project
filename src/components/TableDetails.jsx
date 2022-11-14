@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import { baseUrl } from '../Global'
 import GuestCard from './GuestCard'
 
@@ -23,7 +23,7 @@ const TableDetails = () => {
     return (
       <div>
         <h1>{ table.table_number }</h1>
-        <p>Create Guest</p>
+        <p><NavLink to={`/tables/${ table.id}/guests/new`}>Create Guest</NavLink></p>
         { guestCards }
       </div>
     )
