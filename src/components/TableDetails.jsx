@@ -19,7 +19,22 @@ const TableDetails = () => {
   if(loading) {
     return <h1>Loading...</h1>
   } else {
-    const guestCards = table.guests.map((guest, index) => <GuestCard key={ index } guest={ guest } table={ table }/>)
+      // remove from backend
+  const deleteGuest = async id => {
+    const response = await fetch(baseUrl + `/guests/${ id }`, { method: "DELETE"})
+    const data = await response.json();
+    removeGuest( id )
+  }
+  
+  // remove from state
+  const removeGuest = id => {
+    setTable({
+      ...table,
+      guests: table.guests.filter( guest => guest.id!= id)
+    })
+  }
+
+    const guestCards = table.guests.map((guest, index) => <GuestCard key={ index } guest={ guest } table={ table } deleteGuest= { deleteGuest } />)
     return (
       <div>
         <h1>{ table.table_number }</h1>

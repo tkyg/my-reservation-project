@@ -3,12 +3,12 @@ import { baseUrl } from '../Global'
 import GuestCard from './GuestCard'
 
 const GuestList = () => {
-  const [ guest, setGuest ] = useState([]);
+  const [ guests, setGuests ] = useState([]);
   
   useEffect(() => {
     fetch(baseUrl + '/guests')
       .then(response => response.json())
-      .then(data => setGuest(data))
+      .then(data => setGuests(data))
   }, [])
 
   // remove from backend
@@ -20,10 +20,10 @@ const GuestList = () => {
   
   // remove from state
   const removeGuest = id => {
-    setGuest(guest.filter( guest => guest.id!= id))
+    setGuests(guests.filter( guest => guest.id!= id))
   }
 
-  const guestCards = guest.map((guest, index) => <GuestCard key={ index } guest={ guest } table={ guest.table } deleteGuest={ deleteGuest }/>)  
+  const guestCards = guests.map((guest, index) => <GuestCard key={ index } guest={ guest } table={ guest.table } deleteGuest={ deleteGuest }/>)  
   return (
     <div style={{fontFamily: "Aboreto", textAlign: "center" }}> 
       <h3>Guest List</h3>
