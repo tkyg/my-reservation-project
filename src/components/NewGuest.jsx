@@ -1,9 +1,10 @@
 import React, { useState, useEffect }from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { Input, Form, InputCreate} from '../styles/formStyle'
-import { baseUrl } from '../Global'
+import { baseUrl, headers } from '../Global'
 
 const NewGuest = () => {
+  const navigate = useNavigate()
   const [ table, setTable ] = useState("")
   // const [ loading, setLoading ] = useState(true)
   const [ state, setState ] = useState({
@@ -29,10 +30,18 @@ const NewGuest = () => {
     })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    // "/tables/:table_id/guests"
+    const options = {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(state)
+    }
+    const response = await fetch(baseUrl + `/tables/${ tableId }/guests`, options)
+    const data = await response.json()
+    navigate(`/tables/${ tableId }`)
   }
+  
 
   return (
     <div>
