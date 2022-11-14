@@ -1,13 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Input, Form, InputCreate } from '../styles/formStyle'
 import { headers, baseUrl } from '../Global'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import '../index.css'
 
 
 const EditTable = () => {
   const [ tableNumber, setTableNumber ] = useState('')
+  const [ table, setTable ] = useState('')
+  const { id } = useParams();
   const navigate = useNavigate()
+
+  useEffect(() => {
+    fetch(baseUrl + `/tables/${id}`)
+    .then(response => response.json())
+    .then(data => {
+      setTable(data)
+      setTableNumber(data.table_number)
+    })
+  }, [])
 
   const handleChange = e => {
     setTableNumber(e.target.value)
@@ -17,23 +28,23 @@ const EditTable = () => {
     e.preventDefault()
     const body = { table_number: tableNumber }
     const options = {
-      method: 'POST',
+      method: 'PATCH',
       headers,
       body: JSON.stringify(body)
     }
-    const response = await fetch(baseUrl + '/tables', options)
+    await fetch(baseUrl + `/tables/${ id }`, options)
     // const data = await response.json()
-    navigate('/tables')
+    navigate(`/tables/${ id }`)
   }
   return (
     <div style={{"fontFamily": "Mukta"}}>
-      <h1>New Table</h1>
+      <h1>Edit { table.table_number }</h1>
       <Form onSubmit={ handleSubmit }>
         <div>
           <label htmlFor="tableNumber">Table Number: </label>
           <Input type="number" id="tableNumber" value={ tableNumber } onChange={ handleChange } autoFocus={ true }/>
         </div>
-        <InputCreate type="submit" value="Create Table" />
+        <InputCreate type="submit" value="Update Table" />
       </Form>
     </div>
   )

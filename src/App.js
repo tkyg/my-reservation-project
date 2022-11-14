@@ -8,6 +8,7 @@ import NewGuest from './components/NewGuest'
 import TableList from './components/TableList'
 import NewTable from './components/NewTable'
 import TableDetails from './components/TableDetails'
+import EditTable from './components/EditTable'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/tables" element={<TableList />} />
           <Route path="/tables/new" element={<NewTable />} />
+          <Route path="/tables/:id/edit" element={<EditTable />} />
           <Route path="/tables/:id" element={<TableDetails />} />
           <Route path="/guests" element={<GuestList />} />
           <Route path="tables/:tableId/guests/new" element={<NewGuest />} />

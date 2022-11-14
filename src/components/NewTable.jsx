@@ -26,13 +26,13 @@ const NewTable = () => {
     navigate('/tables')
   }
   return (
-    <div style={{"fontFamily": "Mukta"}}>
-      <h1>New Table</h1>
+    <div style={{fontFamily: "Aboreto", textAlign: "center" }}>
+      <h1>New Table for Reservation</h1>
       <Form onSubmit={ handleSubmit }>
         <div>
           <label htmlFor="tableNumber">Table Number: </label>
           <Input type="number" id="tableNumber" value={ tableNumber } onChange={ handleChange } autoFocus={ true }/>
-        </div>
+        </div><br />
         <InputCreate type="submit" value="Create Table" />
       </Form>
     </div>

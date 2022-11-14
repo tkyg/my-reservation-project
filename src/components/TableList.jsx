@@ -17,7 +17,7 @@ const TableList = () => {
 
   const tableCards = tables.map((table, index) => <TableCard key={ index } table={ table }/>)  
   return (
-    <div> 
+    <div style={{fontFamily: "Aboreto", textAlign: "center" }}> 
       <h1>TableList</h1>
       { tableCards }
     </div>
