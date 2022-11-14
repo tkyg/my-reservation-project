@@ -11,6 +11,10 @@ const TableList = () => {
       .then(data => setTables(data))
   }, [])
 
+  const deleteGuest = async id => {
+    
+  }
+
   const tableCards = tables.map((table, index) => <TableCard key={ index } table={ table }/>)  
   return (
     <div> 
