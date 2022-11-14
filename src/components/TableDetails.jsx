@@ -38,6 +38,7 @@ const TableDetails = () => {
     return (
       <div>
         <h1>{ table.table_number }</h1>
+        <p><NavLink to={`/tables/${ table.id }/edit`}>Edit Reservation</NavLink></p>
         <p><NavLink to={`/tables/${ table.id}/guests/new`}>Create Guest</NavLink></p>
         { guestCards }
       </div>
