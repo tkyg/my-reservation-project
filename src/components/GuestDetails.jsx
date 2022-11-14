@@ -23,6 +23,8 @@ const GuestDetails = () => {
   if(loading) {
     return <h1>Loading...</h1>
   } else {
+    
+
     return (
       <Div>
         <div style={{fontFamily: "Mukta", fontSize: "16px", fontWeight: "900"}}>

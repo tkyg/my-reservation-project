@@ -6,7 +6,6 @@ import { baseUrl, headers } from '../Global'
 const NewGuest = () => {
   const navigate = useNavigate()
   const [ table, setTable ] = useState("")
-  // const [ loading, setLoading ] = useState(true)
   const [ state, setState ] = useState({
     name: "",
     number_of_guests: "", 
@@ -45,7 +44,7 @@ const NewGuest = () => {
 
   return (
     <div>
-      <h3> New Reservation for { table.table_number }</h3>
+      <h3 style={{fontFamily: "Aboreto", textAlign: "center" }}> New Reservation for Table: { table.table_number }</h3>
       <Form onSubmit={ handleSubmit }>
         <div>
           <label htmlFor="name">Name: </label>

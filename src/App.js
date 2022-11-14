@@ -5,6 +5,7 @@ import Home from './components/Home'
 import GuestList from './components/GuestList'
 import GuestDetails from './components/GuestDetails'
 import NewGuest from './components/NewGuest'
+import EditGuest from './components/EditGuest'
 import TableList from './components/TableList'
 import NewTable from './components/NewTable'
 import TableDetails from './components/TableDetails'
@@ -24,6 +25,7 @@ function App() {
           <Route path="/tables/:id" element={<TableDetails />} />
           <Route path="/guests" element={<GuestList />} />
           <Route path="tables/:tableId/guests/new" element={<NewGuest />} />
+          <Route path="/guests/:id/edit" element={<EditGuest />} />
           <Route path="/guests/:id" element={<GuestDetails />} />
 
         </Routes>

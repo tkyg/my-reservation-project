@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Input, Form, InputCreate } from '../styles/formStyle'
 import { headers, baseUrl } from '../Global'
 import { useNavigate, useParams } from 'react-router-dom'
-import '../index.css'
+// import '../index.css'
 
 
 const EditTable = () => {
@@ -38,7 +38,7 @@ const EditTable = () => {
   }
   return (
     <div style={{"fontFamily": "Mukta"}}>
-      <h1>Edit { table.table_number }</h1>
+      <h1 style={{fontFamily: "Aboreto", textAlign: "center" }}>Updating { table.table_number }</h1>
       <Form onSubmit={ handleSubmit }>
         <div>
           <label htmlFor="tableNumber">Table Number: </label>

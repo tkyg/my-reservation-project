@@ -38,6 +38,17 @@ export const Div1 = styled.div`
   font-size: 16px;
 `
 
+export const Div2 = styled.div`
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  max-height: 100px;
+  border-radius: 10px;
+  float: "right";
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+`
 export const Button = styled.button`
    border-radius: 10px;
    border:none;
