@@ -65,33 +65,4 @@ const EditGuest = () => {
     </div>
   )
 }
-
-  
-
-//   return (
-//     <div style={{fontFamily: "Aboreto", textAlign: "center" }}>
-//       <h3> Update Reservation </h3>
-//       <Form onSubmit={ handleSubmit }>
-//         <div>
-//           <label htmlFor="name">Name: </label>
-//           <Input type="text" name="name" id="name" value={ name } onChange={ handleChange } />
-//         </div><br />
-//         <div>
-//         <label htmlFor="number_of_guests">Number of Guests Arriving: </label>
-//           <Input type="number" name="number_of_guests" id="number_of_guests" value={ number_of_guests } onChange={ handleChange } />
-//         </div><br />
-//         <div>
-//           <label htmlFor="reservation">Reservation Time: </label>
-//           <Input type="time" name="reservation" id="reservation" value={ reservation } onChange={ handleChange } />
-//         </div><br />
-//         <div>
-//           <label htmlFor="notes">Notes: </label>
-//           <Input type="text" name="notes" id="notes" value={ notes } onChange={ handleChange } />
-//         </div><br />
-//         <div><InputCreate type="submit" value="Update Reservation" /></div>
-//       </Form>
-//     </div>
-//   )
-// }
-
 export default EditGuest

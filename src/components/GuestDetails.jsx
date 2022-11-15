@@ -33,7 +33,7 @@ const GuestDetails = () => {
         <p><span style={{color:"#ccae68"}}>Guest Reservation Time:</span>&emsp;{ guest.reservation } pm</p>
         <p><span style={{color:"#ccae68"}}>Guest Notes:</span>&emsp;{ guest.notes }</p>
         <p><span style={{color:"#ccae68"}}>Table Number:</span>&emsp;{guest.table.table_number}</p>
-        <p><NavLink to={`/guests/${ guest.id }/edit`}>Edit Booking</NavLink></p>
+        <p><NavLink to={`/guests/${ guest.id }/edit`}>Update Reservation</NavLink></p>
         </div>
       </Div>
     )

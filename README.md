@@ -1,3 +1,33 @@
+# **GUEST RESERVATION**
+
+## Description
+Guest Reservation is a reservation app made for the front of the house of a restaurant. It allows the host to enter in new reservation into the system with the necessary information to make a detailed booking. Information, such as guest name, guests arriving, reservation time, and special notes regarding the guest, all of which can be favorably used by a restaurant’s front end team to provide a successful service to their guest. The app features a well ordered navigation that makes booking easy, and as well as updating a current reservation simple.
+
+To get started with the application: 
+1. Navigate to New Reservation, enter an available table number, and click Create Table. 
+2. Click on Create Guest, which directs to a form page that requires guest information to Add the guest to the Guest List. 
+3. Confirm the reservation was successful by navigating to Guest List tab, where you will find the newly created guest. 
+
+Once a reservation is successfully created, select a particular reservation, and update the reservation by clicking the Update Reservation link. The app also offers an option to delete the booking, which is available beside each guest card, to get the table ready for the next reservation. 
+
+The Guest List and Table List offers a broad overview of the most current guest list, and all the tables occupied without revealing all the information of a guest. A feature added to protect the privacy of guests visiting the restaurant. 
+
+Demonstrated in this gif is how easily this single page application can be used. 
+![Guest Reservation Working App](https://media.giphy.com/media/FA7DGxhHikiqYqbmML/giphy.gif)
+
+
+## Links
+
+To read my blog [Click Here](https://medium.com/@ttenkyong/active-record-migrations-seeding-and-crud-operations-c0f3e5f7db7a)
+
+For a quick walkthrough of my single page application, and its available features [Click Here](https://youtu.be/4YdLDB1NHz0)
+
+## Installation
+1. Fork and clone the repo
+2. Cd into the project and run npm install
+3. Run the json-server with: npm run server
+4. In a new terminal Run the React server with: npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +98,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Authors and Acknowledgment
+
+Sincere thank you to [Enoch Griffith](https://www.linkedin.com/in/enochgriffith), my cohort lead for his constant support and guidance.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
